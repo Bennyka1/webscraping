@@ -1955,9 +1955,91 @@ length(characters)</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<div id="test-mit-selector-gadget" class="section level2">
+<h2>Test mit Selector Gadget</h2>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2FzdCA8LSBodG1sX25vZGVzKGh0bWwsIFwiLnByaW1hcnlfcGhvdG8rIHRkIGFcIilcbmxlbmd0aChjYXN0KVxuYGBgIn0= -->
+<pre class="r"><code>cast &lt;- html_nodes(html, &quot;.primary_photo+ td a&quot;)
+length(cast)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE1XG4ifQ== -->
+<pre><code>[1] 15</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2FzdFsxOjJdXG5gYGAifQ== -->
+<pre class="r"><code>cast[1:2]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoie3htbF9ub2Rlc2V0ICgyKX1cblsxXSA8YSBocmVmPVwiL25hbWUvbm0wMDA0NzE1Lz9yZWZfPXR0X2NsX3QxXCI+IFdpbGwgQXJuZXR0XFxuPFwvYT5cblsyXSA8YSBocmVmPVwiL25hbWUvbm0wMDA2OTY5Lz9yZWZfPXR0X2NsX3QyXCI+IEVsaXphYmV0aCBCYW5rc1xcbjxcL2E+XG4ifQ== -->
+<pre><code>{xml_nodeset (2)}
+[1] &lt;a href=&quot;/name/nm0004715/?ref_=tt_cl_t1&quot;&gt; Will Arnett\n&lt;/a&gt;
+[2] &lt;a href=&quot;/name/nm0006969/?ref_=tt_cl_t2&quot;&gt; Elizabeth Banks\n&lt;/a&gt;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Extract text from the HTML nodes:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaHRtbF90ZXh0KGNhc3QsIHRyaW0gPSBUUlVFKVxuYGBgIn0= -->
+<pre class="r"><code>html_text(cast, trim = TRUE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIldpbGwgQXJuZXR0XCIgICAgIFwiRWxpemFiZXRoIEJhbmtzXCIgXCJDcmFpZyBCZXJyeVwiICAgICBcIkFsaXNvbiBCcmllXCIgICAgIFwiRGF2aWQgQnVycm93c1wiICAgXCJBbnRob255IERhbmllbHNcIlxuIFs3XSBcIkNoYXJsaWUgRGF5XCIgICAgIFwiQW1hbmRhIEZhcmlub3NcIiAgXCJLZWl0aCBGZXJndXNvblwiICBcIldpbGwgRmVycmVsbFwiICAgIFwiV2lsbCBGb3J0ZVwiICAgICAgXCJEYXZlIEZyYW5jb1wiICAgIFxuWzEzXSBcIk1vcmdhbiBGcmVlbWFuXCIgIFwiVG9kZCBIYW5zZW5cIiAgICAgXCJKb25haCBIaWxsXCIgICAgIFxuIn0= -->
+<pre><code> [1] &quot;Will Arnett&quot;     &quot;Elizabeth Banks&quot; &quot;Craig Berry&quot;     &quot;Alison Brie&quot;     &quot;David Burrows&quot;   &quot;Anthony Daniels&quot;
+ [7] &quot;Charlie Day&quot;     &quot;Amanda Farinos&quot;  &quot;Keith Ferguson&quot;  &quot;Will Ferrell&quot;    &quot;Will Forte&quot;      &quot;Dave Franco&quot;    
+[13] &quot;Morgan Freeman&quot;  &quot;Todd Hansen&quot;     &quot;Jonah Hill&quot;     </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>We can access html attributes of the selected nodes using html_attrs().</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2FzdF9hdHRycyA8LSBodG1sX2F0dHJzKGNhc3QpXG5sZW5ndGgoY2FzdF9hdHRycylcbmBgYCJ9 -->
+<pre class="r"><code>cast_attrs &lt;- html_attrs(cast)
+length(cast_attrs)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE1XG4ifQ== -->
+<pre><code>[1] 15</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2FzdF9hdHRyc1sxOjJdXG5gYGAifQ== -->
+<pre class="r"><code>cast_attrs[1:2]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiW1sxXV1cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBocmVmIFxuXCIvbmFtZS9ubTAwMDQ3MTUvP3JlZl89dHRfY2xfdDFcIiBcblxuW1syXV1cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBocmVmIFxuXCIvbmFtZS9ubTAwMDY5NjkvP3JlZl89dHRfY2xfdDJcIiBcbiJ9 -->
+<pre><code>[[1]]
+                            href 
+&quot;/name/nm0004715/?ref_=tt_cl_t1&quot; 
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiSGFydmVzdGluZyB0aGUgV2ViIC0gQmVuamFtaW4gS2FtcGthIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiAKClRyeSBleGVjdXRpbmcgdGhpcyBjaHVuayBieSBjbGlja2luZyB0aGUgKlJ1biogYnV0dG9uIHdpdGhpbiB0aGUgY2h1bmsgb3IgYnkgcGxhY2luZyB5b3VyIGN1cnNvciBpbnNpZGUgaXQgYW5kIHByZXNzaW5nICpDbWQrU2hpZnQrRW50ZXIqLiAKCmBgYHtyfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShydmVzdCkKYGBgCgpBZGQgYSBuZXcgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpJbnNlcnQgQ2h1bmsqIGJ1dHRvbiBvbiB0aGUgdG9vbGJhciBvciBieSBwcmVzc2luZyAqQ21kK09wdGlvbitJKi4KCldoZW4geW91IHNhdmUgdGhlIG5vdGVib29rLCBhbiBIVE1MIGZpbGUgY29udGFpbmluZyB0aGUgY29kZSBhbmQgb3V0cHV0IHdpbGwgYmUgc2F2ZWQgYWxvbmdzaWRlIGl0IChjbGljayB0aGUgKlByZXZpZXcqIGJ1dHRvbiBvciBwcmVzcyAqQ21kK1NoaWZ0K0sqIHRvIHByZXZpZXcgdGhlIEhUTUwgZmlsZSkuIAoKVGhlIHByZXZpZXcgc2hvd3MgeW91IGEgcmVuZGVyZWQgSFRNTCBjb3B5IG9mIHRoZSBjb250ZW50cyBvZiB0aGUgZWRpdG9yLiBDb25zZXF1ZW50bHksIHVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IFIgY29kZSBjaHVua3MuIEluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGluIHRoZSBlZGl0b3IgaXMgZGlzcGxheWVkLgoKYGBge3J9CmxlZ29fdXJsIDwtICJodHRwOi8vd3d3LmltZGIuY29tL3RpdGxlL3R0MTQ5MDAxNy8iCmh0bWwgPC0gcmVhZF9odG1sKGxlZ29fdXJsKQpjaGFyYWN0ZXJzIDwtIGh0bWxfbm9kZXMoaHRtbCwgIi5jYXN0X2xpc3QgLmNoYXJhY3RlciIpCmxlbmd0aChjaGFyYWN0ZXJzKQpgYGAKCmBgYHtyfQpjaGFyYWN0ZXJzWzE6Ml0KYGBgCgpgYGB7cn0KaHRtbF90ZXh0KGNoYXJhY3RlcnMsIHRyaW09VFJVRSkKYGBgCgpydmVzdCBjb250YWlucyBhIGZldyBoYW5keSBmdW5jdGlvbnMgZm9yIGFjY2Vzc2luZyBkaWZmZXJlbnQgYXR0cmlidXRlcyBvZiB0aGUgY3VycmVudGx5IHNlbGVjdGVkIG5vZGVzLiBGb3IgZXhhbXBsZSwgd2UgY2FuIGFjY2VzcyBuYW1lcyBvZiB0aGUgc2VsZWN0ZWQgdGFncyB3aXRoIGh0bWxfbmFtZSgpOgoKYGBge3J9Cmh0bWxfbm9kZXMoaHRtbCwiLmNhc3RfbGlzdCIpICU+JSAKICBodG1sX25hbWUoKQpgYGAKCmBgYHtyfQpodG1sX25vZGUoaHRtbCwiLmNhc3RfbGlzdCIpCmBgYAoKYGBge3J9Cmh0bWxfbm9kZShodG1sLCIuY2FzdF9saXN0IikgJT4lIAogIGh0bWxfdGFibGUoKSAlPiUgCiAgaGVhZCgpCmBgYApgYGB7cn0KaHRtbF9ub2RlKGh0bWwsICIuY2FzdF9saXN0IC5jaGFyYWN0ZXIiKSAlPiUgCiAgaHRtbF90ZXh0KCkKYGBgCgpgYGB7cn0KaHRtbF9ub2RlcyhodG1sLCAiLmNhc3RfbGlzdCAuY2hhcmFjdGVyIikgJT4lIAogIGh0bWxfY2hpbGRyZW4oKSAlPiUgCiAgaHRtbF9hdHRyKCJocmVmIikKYGBgCgpgYGB7cn0KaHRtbF9ub2RlKGh0bWwsICIuY2FzdF9saXN0IC5jaGFyYWN0ZXIiKSAlPiUgCiAgaHRtbF9jaGlsZHJlbigpICU+JSAKICBodG1sX3RleHQoKQpgYGAKCmBgYHtyfQpodG1sX25vZGUoaHRtbCwgIi5jYXN0X2xpc3QgLmNoYXJhY3RlciIpICU+JSAKICBodG1sX25vZGVzKHhwYXRoPSIuL3RleHQoKVtub3JtYWxpemUtc3BhY2UoKV0iKQpgYGAKCmBgYHtyfQpodG1sX25vZGUoaHRtbCwgIi5jYXN0X2xpc3QgLmNoYXJhY3RlciIpICU+JSAKICBodG1sX25vZGVzKHhwYXRoPSIuL3RleHQoKVtub3JtYWxpemUtc3BhY2UoKV0iKSAlPiUgCiAgaHRtbF90ZXh0KHRyaW09VFJVRSkKYGBgCgo=</div>
+[[2]]
+                            href 
+&quot;/name/nm0006969/?ref_=tt_cl_t2&quot; </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>As we can see there’s only one attribute called href which contains relative url to the actor’s page. We can extract it using html_attr(), indicating the name of the attribute of interest. Relative urls can be turned to absolute urls using url_absolute().</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2FzdF9hYnNfdXJscyA8LSBodG1sX2F0dHIoY2FzdCwgXCJocmVmXCIpICU+JSB1cmxfYWJzb2x1dGUobGVnb191cmwpXG5jYXN0X2Fic191cmxzXG5gYGAifQ== -->
+<pre class="r"><code>cast_abs_urls &lt;- html_attr(cast, &quot;href&quot;) %&gt;% url_absolute(lego_url)
+cast_abs_urls</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcImh0dHA6Ly93d3cuaW1kYi5jb20vbmFtZS9ubTAwMDQ3MTUvP3JlZl89dHRfY2xfdDFcIiAgXCJodHRwOi8vd3d3LmltZGIuY29tL25hbWUvbm0wMDA2OTY5Lz9yZWZfPXR0X2NsX3QyXCIgXG4gWzNdIFwiaHR0cDovL3d3dy5pbWRiLmNvbS9uYW1lL25tMTkxMTk0Ny8/cmVmXz10dF9jbF90M1wiICBcImh0dHA6Ly93d3cuaW1kYi5jb20vbmFtZS9ubTE1NTUzNDAvP3JlZl89dHRfY2xfdDRcIiBcbiBbNV0gXCJodHRwOi8vd3d3LmltZGIuY29tL25hbWUvbm0wMTIzMjYyLz9yZWZfPXR0X2NsX3Q1XCIgIFwiaHR0cDovL3d3dy5pbWRiLmNvbS9uYW1lL25tMDAwMDM1NS8/cmVmXz10dF9jbF90NlwiIFxuIFs3XSBcImh0dHA6Ly93d3cuaW1kYi5jb20vbmFtZS9ubTAyMDYzNTkvP3JlZl89dHRfY2xfdDdcIiAgXCJodHRwOi8vd3d3LmltZGIuY29tL25hbWUvbm01MzIyOTUwLz9yZWZfPXR0X2NsX3Q4XCIgXG4gWzldIFwiaHR0cDovL3d3dy5pbWRiLmNvbS9uYW1lL25tMTU4NDk5Mi8/cmVmXz10dF9jbF90OVwiICBcImh0dHA6Ly93d3cuaW1kYi5jb20vbmFtZS9ubTAwMDIwNzEvP3JlZl89dHRfY2xfdDEwXCJcblsxMV0gXCJodHRwOi8vd3d3LmltZGIuY29tL25hbWUvbm0wMjg3MTgyLz9yZWZfPXR0X2NsX3QxMVwiIFwiaHR0cDovL3d3dy5pbWRiLmNvbS9uYW1lL25tMjAwMjY0OS8/cmVmXz10dF9jbF90MTJcIlxuWzEzXSBcImh0dHA6Ly93d3cuaW1kYi5jb20vbmFtZS9ubTAwMDAxNTEvP3JlZl89dHRfY2xfdDEzXCIgXCJodHRwOi8vd3d3LmltZGIuY29tL25hbWUvbm0zMDI1Mzk5Lz9yZWZfPXR0X2NsX3QxNFwiXG5bMTVdIFwiaHR0cDovL3d3dy5pbWRiLmNvbS9uYW1lL25tMTcwNjc2Ny8/cmVmXz10dF9jbF90MTVcIlxuIn0= -->
+<pre><code> [1] &quot;http://www.imdb.com/name/nm0004715/?ref_=tt_cl_t1&quot;  &quot;http://www.imdb.com/name/nm0006969/?ref_=tt_cl_t2&quot; 
+ [3] &quot;http://www.imdb.com/name/nm1911947/?ref_=tt_cl_t3&quot;  &quot;http://www.imdb.com/name/nm1555340/?ref_=tt_cl_t4&quot; 
+ [5] &quot;http://www.imdb.com/name/nm0123262/?ref_=tt_cl_t5&quot;  &quot;http://www.imdb.com/name/nm0000355/?ref_=tt_cl_t6&quot; 
+ [7] &quot;http://www.imdb.com/name/nm0206359/?ref_=tt_cl_t7&quot;  &quot;http://www.imdb.com/name/nm5322950/?ref_=tt_cl_t8&quot; 
+ [9] &quot;http://www.imdb.com/name/nm1584992/?ref_=tt_cl_t9&quot;  &quot;http://www.imdb.com/name/nm0002071/?ref_=tt_cl_t10&quot;
+[11] &quot;http://www.imdb.com/name/nm0287182/?ref_=tt_cl_t11&quot; &quot;http://www.imdb.com/name/nm2002649/?ref_=tt_cl_t12&quot;
+[13] &quot;http://www.imdb.com/name/nm0000151/?ref_=tt_cl_t13&quot; &quot;http://www.imdb.com/name/nm3025399/?ref_=tt_cl_t14&quot;
+[15] &quot;http://www.imdb.com/name/nm1706767/?ref_=tt_cl_t15&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+</div>
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiSGFydmVzdGluZyB0aGUgV2ViIC0gQmVuamFtaW4gS2FtcGthIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiAKClRyeSBleGVjdXRpbmcgdGhpcyBjaHVuayBieSBjbGlja2luZyB0aGUgKlJ1biogYnV0dG9uIHdpdGhpbiB0aGUgY2h1bmsgb3IgYnkgcGxhY2luZyB5b3VyIGN1cnNvciBpbnNpZGUgaXQgYW5kIHByZXNzaW5nICpDbWQrU2hpZnQrRW50ZXIqLiAKCmBgYHtyfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShydmVzdCkKYGBgCgpBZGQgYSBuZXcgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpJbnNlcnQgQ2h1bmsqIGJ1dHRvbiBvbiB0aGUgdG9vbGJhciBvciBieSBwcmVzc2luZyAqQ21kK09wdGlvbitJKi4KCldoZW4geW91IHNhdmUgdGhlIG5vdGVib29rLCBhbiBIVE1MIGZpbGUgY29udGFpbmluZyB0aGUgY29kZSBhbmQgb3V0cHV0IHdpbGwgYmUgc2F2ZWQgYWxvbmdzaWRlIGl0IChjbGljayB0aGUgKlByZXZpZXcqIGJ1dHRvbiBvciBwcmVzcyAqQ21kK1NoaWZ0K0sqIHRvIHByZXZpZXcgdGhlIEhUTUwgZmlsZSkuIAoKVGhlIHByZXZpZXcgc2hvd3MgeW91IGEgcmVuZGVyZWQgSFRNTCBjb3B5IG9mIHRoZSBjb250ZW50cyBvZiB0aGUgZWRpdG9yLiBDb25zZXF1ZW50bHksIHVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IFIgY29kZSBjaHVua3MuIEluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGluIHRoZSBlZGl0b3IgaXMgZGlzcGxheWVkLgoKYGBge3J9CmxlZ29fdXJsIDwtICJodHRwOi8vd3d3LmltZGIuY29tL3RpdGxlL3R0MTQ5MDAxNy8iCmh0bWwgPC0gcmVhZF9odG1sKGxlZ29fdXJsKQpjaGFyYWN0ZXJzIDwtIGh0bWxfbm9kZXMoaHRtbCwgIi5jYXN0X2xpc3QgLmNoYXJhY3RlciIpCmxlbmd0aChjaGFyYWN0ZXJzKQpgYGAKCmBgYHtyfQpjaGFyYWN0ZXJzWzE6Ml0KYGBgCgpgYGB7cn0KaHRtbF90ZXh0KGNoYXJhY3RlcnMsIHRyaW09VFJVRSkKYGBgCgpydmVzdCBjb250YWlucyBhIGZldyBoYW5keSBmdW5jdGlvbnMgZm9yIGFjY2Vzc2luZyBkaWZmZXJlbnQgYXR0cmlidXRlcyBvZiB0aGUgY3VycmVudGx5IHNlbGVjdGVkIG5vZGVzLiBGb3IgZXhhbXBsZSwgd2UgY2FuIGFjY2VzcyBuYW1lcyBvZiB0aGUgc2VsZWN0ZWQgdGFncyB3aXRoIGh0bWxfbmFtZSgpOgoKYGBge3J9Cmh0bWxfbm9kZXMoaHRtbCwiLmNhc3RfbGlzdCIpICU+JSAKICBodG1sX25hbWUoKQpgYGAKCmBgYHtyfQpodG1sX25vZGUoaHRtbCwiLmNhc3RfbGlzdCIpCmBgYAoKYGBge3J9Cmh0bWxfbm9kZShodG1sLCIuY2FzdF9saXN0IikgJT4lIAogIGh0bWxfdGFibGUoKSAlPiUgCiAgaGVhZCgpCmBgYApgYGB7cn0KaHRtbF9ub2RlKGh0bWwsICIuY2FzdF9saXN0IC5jaGFyYWN0ZXIiKSAlPiUgCiAgaHRtbF90ZXh0KCkKYGBgCgpgYGB7cn0KaHRtbF9ub2RlcyhodG1sLCAiLmNhc3RfbGlzdCAuY2hhcmFjdGVyIikgJT4lIAogIGh0bWxfY2hpbGRyZW4oKSAlPiUgCiAgaHRtbF9hdHRyKCJocmVmIikKYGBgCgpgYGB7cn0KaHRtbF9ub2RlKGh0bWwsICIuY2FzdF9saXN0IC5jaGFyYWN0ZXIiKSAlPiUgCiAgaHRtbF9jaGlsZHJlbigpICU+JSAKICBodG1sX3RleHQoKQpgYGAKCmBgYHtyfQpodG1sX25vZGUoaHRtbCwgIi5jYXN0X2xpc3QgLmNoYXJhY3RlciIpICU+JSAKICBodG1sX25vZGVzKHhwYXRoPSIuL3RleHQoKVtub3JtYWxpemUtc3BhY2UoKV0iKQpgYGAKCmBgYHtyfQpodG1sX25vZGUoaHRtbCwgIi5jYXN0X2xpc3QgLmNoYXJhY3RlciIpICU+JSAKICBodG1sX25vZGVzKHhwYXRoPSIuL3RleHQoKVtub3JtYWxpemUtc3BhY2UoKV0iKSAlPiUgCiAgaHRtbF90ZXh0KHRyaW09VFJVRSkKYGBgCgojIyBUZXN0IG1pdCBTZWxlY3RvciBHYWRnZXQKCmBgYHtyfQpjYXN0IDwtIGh0bWxfbm9kZXMoaHRtbCwgIi5wcmltYXJ5X3Bob3RvKyB0ZCBhIikKbGVuZ3RoKGNhc3QpCmBgYAoKYGBge3J9CmNhc3RbMToyXQpgYGAKCkV4dHJhY3QgdGV4dCBmcm9tIHRoZSBIVE1MIG5vZGVzOgoKYGBge3J9Cmh0bWxfdGV4dChjYXN0LCB0cmltID0gVFJVRSkKYGBgCgpXZSBjYW4gYWNjZXNzIGh0bWwgYXR0cmlidXRlcyBvZiB0aGUgc2VsZWN0ZWQgbm9kZXMgdXNpbmcgaHRtbF9hdHRycygpLgoKYGBge3J9CmNhc3RfYXR0cnMgPC0gaHRtbF9hdHRycyhjYXN0KQpsZW5ndGgoY2FzdF9hdHRycykKY2FzdF9hdHRyc1sxOjJdCgpgYGAKCkFzIHdlIGNhbiBzZWUgdGhlcmXigJlzIG9ubHkgb25lIGF0dHJpYnV0ZSBjYWxsZWQgaHJlZiB3aGljaCBjb250YWlucyByZWxhdGl2ZSB1cmwgdG8gdGhlIGFjdG9y4oCZcyBwYWdlLiBXZSBjYW4gZXh0cmFjdCBpdCB1c2luZyBodG1sX2F0dHIoKSwgaW5kaWNhdGluZyB0aGUgbmFtZSBvZiB0aGUgYXR0cmlidXRlIG9mIGludGVyZXN0LiBSZWxhdGl2ZSB1cmxzIGNhbiBiZSB0dXJuZWQgdG8gYWJzb2x1dGUgdXJscyB1c2luZyB1cmxfYWJzb2x1dGUoKS4KCmBgYHtyfQpjYXN0X2Fic191cmxzIDwtIGh0bWxfYXR0cihjYXN0LCAiaHJlZiIpICU+JSB1cmxfYWJzb2x1dGUobGVnb191cmwpCmNhc3RfYWJzX3VybHMKYGBgCgo=</div>
 
 
 
