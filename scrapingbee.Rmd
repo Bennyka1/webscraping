@@ -1,0 +1,91 @@
+---
+title: "Scrapingbee - Benjamin Kampka - 35017"
+output: html_notebook
+---
+
+# Parsing a webpage using R
+
+```{r}
+library(tidyverse)
+library(RCurl)
+scrape_url <- "https://www.scrapingbee.com/"
+flat_html <- readLines(scrape_url)
+head(flat_html,n=20)
+```
+
+### Scrape Google
+
+```{r}
+scrape_url2 <- "https://www.google.de"
+flat_html2 <- readLines(scrape_url2)
+flat_html2
+```
+
+### Scrape a Simple Webpage
+
+```{r}
+scrape_url3 <- "https://www.york.ac.uk/teaching/cws/wws/webpage1.html"
+flat_html3 <- readLines(scrape_url3)
+flat_html3
+```
+
+### ftp access 
+
+```{r}
+ftp_url <- "ftp://cran.r-project.org/pub/R/web/packages/BayesMixSurv/"
+get_files <- getURL(ftp_url, dirlistonly = TRUE)
+get_files
+```
+
+
+Filenames are: 
+```{r}
+all_filenames <- str_split(get_files,"\n")
+all_filenames
+```
+
+
+```{r}
+extracted_filenames <- str_split(get_files, "\r\n")[[1]]
+extracted_html_filenames <-unlist(str_extract_all(extracted_filenames, ".+(.html)"))
+extracted_html_filenames
+```
+
+Download HTML Docs:
+
+```{r}
+FTPDownloader <- function(filename, folder, handle) {
+
+  dir.create(folder, showWarnings = FALSE)
+
+  fileurl <- str_c(ftp, filename)
+
+  if (!file.exists(str_c(folder, "/", filename))) {
+
+    file_name <- try(getURL(fileurl, curl = handle))
+
+    write(file_name, str_c(folder, "/", filename))
+
+    Sys.sleep(1)
+
+  }
+
+} 
+
+```
+
+```{r}
+Curlhandle <- getCurlHandle(ftp.use.epsv = FALSE)
+```
+
+```{r}
+l_ply(extracted_html_filenames, FTPDownloader, folder = "scrapingbee_html", handle = Curlhandle)
+```
+
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
