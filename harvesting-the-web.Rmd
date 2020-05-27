@@ -9,6 +9,7 @@ Try executing this chunk by clicking the *Run* button within the chunk or by pla
 
 ```{r}
 library(tidyverse)
+library(rvest)
 ```
 
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
@@ -16,4 +17,63 @@ Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by press
 When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
 
 The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+```{r}
+lego_url <- "http://www.imdb.com/title/tt1490017/"
+html <- read_html(lego_url)
+characters <- html_nodes(html, ".cast_list .character")
+length(characters)
+```
+
+```{r}
+characters[1:2]
+```
+
+```{r}
+html_text(characters, trim=TRUE)
+```
+
+rvest contains a few handy functions for accessing different attributes of the currently selected nodes. For example, we can access names of the selected tags with html_name():
+
+```{r}
+html_nodes(html,".cast_list") %>% 
+  html_name()
+```
+
+```{r}
+html_node(html,".cast_list")
+```
+
+```{r}
+html_node(html,".cast_list") %>% 
+  html_table() %>% 
+  head()
+```
+```{r}
+html_node(html, ".cast_list .character") %>% 
+  html_text()
+```
+
+```{r}
+html_nodes(html, ".cast_list .character") %>% 
+  html_children() %>% 
+  html_attr("href")
+```
+
+```{r}
+html_node(html, ".cast_list .character") %>% 
+  html_children() %>% 
+  html_text()
+```
+
+```{r}
+html_node(html, ".cast_list .character") %>% 
+  html_nodes(xpath="./text()[normalize-space()]")
+```
+
+```{r}
+html_node(html, ".cast_list .character") %>% 
+  html_nodes(xpath="./text()[normalize-space()]") %>% 
+  html_text(trim=TRUE)
+```
 

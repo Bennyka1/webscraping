@@ -1753,19 +1753,11 @@ summary {
 <p>Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Cmd+Shift+Enter</em>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5cbmBgYCJ9 -->
-<pre class="r"><code>library(tidyverse)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5gYGAifQ== -->
+<pre class="r"><code>library(tidyverse)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUmVnaXN0ZXJlZCBTMyBtZXRob2Qgb3ZlcndyaXR0ZW4gYnkgJ2RwbHlyJzpcbiAgbWV0aG9kICAgICAgICAgICBmcm9tXG4gIHByaW50LnJvd3dpc2VfZGYgICAgIFxuUmVnaXN0ZXJlZCBTMyBtZXRob2RzIG92ZXJ3cml0dGVuIGJ5ICdkYnBseXInOlxuICBtZXRob2QgICAgICAgICBmcm9tXG4gIHByaW50LnRibF9sYXp5ICAgICBcbiAgcHJpbnQudGJsX3NxbCAgICAgIFxu4pSA4pSAIEF0dGFjaGluZyBwYWNrYWdlcyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAgdGlkeXZlcnNlIDEuMy4wIOKUgOKUgFxu4pyTIGdncGxvdDIgMy4zLjAgICAgIOKckyBwdXJyciAgIDAuMy40XG7inJMgdGliYmxlICAzLjAuMSAgICAg4pyTIGRwbHlyICAgMC44LjVcbuKckyB0aWR5ciAgIDEuMC4yICAgICDinJMgc3RyaW5nciAxLjQuMFxu4pyTIHJlYWRyICAgMS4zLjEgICAgIOKckyBmb3JjYXRzIDAuNS4wXG7ilIDilIAgQ29uZmxpY3RzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCB0aWR5dmVyc2VfY29uZmxpY3RzKCkg4pSA4pSAXG54IGRwbHlyOjpmaWx0ZXIoKSBtYXNrcyBzdGF0czo6ZmlsdGVyKClcbnggZHBseXI6OmxhZygpICAgIG1hc2tzIHN0YXRzOjpsYWcoKVxuIn0= -->
-<pre><code>Registered S3 method overwritten by &#39;dplyr&#39;:
-  method           from
-  print.rowwise_df     
-Registered S3 methods overwritten by &#39;dbplyr&#39;:
-  method         from
-  print.tbl_lazy     
-  print.tbl_sql      
-── Attaching packages ────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──
+<!-- rnb-output-begin eyJkYXRhIjoi4pSA4pSAIEF0dGFjaGluZyBwYWNrYWdlcyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAgdGlkeXZlcnNlIDEuMy4wIOKUgOKUgFxu4pyTIGdncGxvdDIgMy4zLjAgICAgIOKckyBwdXJyciAgIDAuMy40XG7inJMgdGliYmxlICAzLjAuMSAgICAg4pyTIGRwbHlyICAgMC44LjVcbuKckyB0aWR5ciAgIDEuMC4yICAgICDinJMgc3RyaW5nciAxLjQuMFxu4pyTIHJlYWRyICAgMS4zLjEgICAgIOKckyBmb3JjYXRzIDAuNS4wXG7ilIDilIAgQ29uZmxpY3RzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCB0aWR5dmVyc2VfY29uZmxpY3RzKCkg4pSA4pSAXG54IGRwbHlyOjpmaWx0ZXIoKSBtYXNrcyBzdGF0czo6ZmlsdGVyKClcbnggZHBseXI6OmxhZygpICAgIG1hc2tzIHN0YXRzOjpsYWcoKVxuIn0= -->
+<pre><code>── Attaching packages ────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──
 ✓ ggplot2 3.3.0     ✓ purrr   0.3.4
 ✓ tibble  3.0.1     ✓ dplyr   0.8.5
 ✓ tidyr   1.0.2     ✓ stringr 1.4.0
@@ -1774,14 +1766,198 @@ Registered S3 methods overwritten by &#39;dbplyr&#39;:
 x dplyr::filter() masks stats::filter()
 x dplyr::lag()    masks stats::lag()</code></pre>
 <!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShydmVzdClcbmBgYCJ9 -->
+<pre class="r"><code>library(rvest)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiTGFkZSBuw7Z0aWdlcyBQYWtldDogeG1sMlxuXG5BdHRhY2hlIFBha2V0OiDigJhydmVzdOKAmVxuXG5UaGUgZm9sbG93aW5nIG9iamVjdCBpcyBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOnB1cnJy4oCZOlxuXG4gICAgcGx1Y2tcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g4oCYcGFja2FnZTpyZWFkcuKAmTpcblxuICAgIGd1ZXNzX2VuY29kaW5nXG4ifQ== -->
+<pre><code>Lade nötiges Paket: xml2
+
+Attache Paket: ‘rvest’
+
+The following object is masked from ‘package:purrr’:
+
+    pluck
+
+The following object is masked from ‘package:readr’:
+
+    guess_encoding</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Cmd+Option+I</em>.</p>
 <p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Cmd+Shift+K</em> to preview the HTML file).</p>
 <p>The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.</p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGVnb191cmwgPC0gXCJodHRwOi8vd3d3LmltZGIuY29tL3RpdGxlL3R0MTQ5MDAxNy9cIlxuaHRtbCA8LSByZWFkX2h0bWwobGVnb191cmwpXG5jaGFyYWN0ZXJzIDwtIGh0bWxfbm9kZXMoaHRtbCwgXCIuY2FzdF9saXN0IC5jaGFyYWN0ZXJcIilcbmxlbmd0aChjaGFyYWN0ZXJzKVxuYGBgIn0= -->
+<pre class="r"><code>lego_url &lt;- &quot;http://www.imdb.com/title/tt1490017/&quot;
+html &lt;- read_html(lego_url)
+characters &lt;- html_nodes(html, &quot;.cast_list .character&quot;)
+length(characters)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE1XG4ifQ== -->
+<pre><code>[1] 15</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2hhcmFjdGVyc1sxOjJdXG5gYGAifQ== -->
+<pre class="r"><code>characters[1:2]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoie3htbF9ub2Rlc2V0ICgyKX1cblsxXSA8dGQgY2xhc3M9XCJjaGFyYWN0ZXJcIj5cXG4gICAgICAgICAgICA8YSBocmVmPVwiL3RpdGxlL3R0MTQ5MDAxNy9jaGFyYWN0ZXJzL25tMDAwNDcxNT9yZWZfPXR0X2NsX3QxXCI+QmF0bWFuPFwvYT4gLyAgIC4uLlxuWzJdIDx0ZCBjbGFzcz1cImNoYXJhY3RlclwiPlxcbiAgICAgICAgICAgIDxhIGhyZWY9XCIvdGl0bGUvdHQxNDkwMDE3L2NoYXJhY3RlcnMvbm0wMDA2OTY5P3JlZl89dHRfY2xfdDJcIj5XeWxkc3R5bGU8XC9hPiAgLi4uXG4ifQ== -->
+<pre><code>{xml_nodeset (2)}
+[1] &lt;td class=&quot;character&quot;&gt;\n            &lt;a href=&quot;/title/tt1490017/characters/nm0004715?ref_=tt_cl_t1&quot;&gt;Batman&lt;/a&gt; /   ...
+[2] &lt;td class=&quot;character&quot;&gt;\n            &lt;a href=&quot;/title/tt1490017/characters/nm0006969?ref_=tt_cl_t2&quot;&gt;Wyldstyle&lt;/a&gt;  ...</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaHRtbF90ZXh0KGNoYXJhY3RlcnMsIHRyaW09VFJVRSlcbmBgYCJ9 -->
+<pre class="r"><code>html_text(characters, trim=TRUE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIkJhdG1hbiAvICBcXG4gICAgICAgICAgICBCcnVjZSBXYXluZSBcXG4gIFxcbiAgXFxuICAodm9pY2UpXCIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiBbMl0gXCJXeWxkc3R5bGUgLyAgXFxuICAgICAgICAgICAgTHVjeSBcXG4gIFxcbiAgXFxuICAodm9pY2UpXCIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gWzNdIFwiQmxha2UgLyAgXFxuICAgICAgICAgICAgQWRkaXRpb25hbCBWb2ljZXMgXFxuICBcXG4gIFxcbiAgKHZvaWNlKVwiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIFs0XSBcIlVuaWtpdHR5IFxcbiAgXFxuICBcXG4gICh2b2ljZSlcIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIFs1XSBcIk9jdGFuIFJvYm90IC8gIFxcbiAgICAgICAgICAgIEFkZGl0aW9uYWwgVm9pY2VzIFxcbiAgXFxuICBcXG4gICh2b2ljZSlcIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiBbNl0gXCJDLTNQTyBcXG4gIFxcbiAgXFxuICAodm9pY2UpXCIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiBbN10gXCJCZW5ueSBcXG4gIFxcbiAgXFxuICAodm9pY2UpXCIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiBbOF0gXCJNb20gXFxuICBcXG4gIFxcbiAgKHZvaWNlKVwiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiBbOV0gXCJIYW4gU29sbyBcXG4gIFxcbiAgXFxuICAodm9pY2UpXCIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcblsxMF0gXCJMb3JkIEJ1c2luZXNzIC8gIFxcbiAgICAgICAgICAgIFByZXNpZGVudCBCdXNpbmVzcyAvICBcXG4gICAgICAgICAgICBUaGUgTWFuIFVwc3RhaXJzIFxcbiAgXFxuICBcXG4gICh2b2ljZSlcIlxuWzExXSBcIkFicmFoYW0gTGluY29sbiBcXG4gIFxcbiAgXFxuICAodm9pY2UpIChhcyBPcnZpbGxlIEZvcnRlKVwiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuWzEyXSBcIldhbGx5IFxcbiAgXFxuICBcXG4gICh2b2ljZSlcIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuWzEzXSBcIlZpdHJ1dml1cyBcXG4gIFxcbiAgXFxuICAodm9pY2UpXCIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuWzE0XSBcIkdhbmRhbGYgLyAgXFxuICAgICAgICAgICAgQWRkaXRpb25hbCBWb2ljZXMgXFxuICBcXG4gIFxcbiAgKHZvaWNlKVwiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcblsxNV0gXCJHcmVlbiBMYW50ZXJuIFxcbiAgXFxuICBcXG4gICh2b2ljZSlcIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiJ9 -->
+<pre><code> [1] &quot;Batman /  \n            Bruce Wayne \n  \n  \n  (voice)&quot;                                                
+ [2] &quot;Wyldstyle /  \n            Lucy \n  \n  \n  (voice)&quot;                                                    
+ [3] &quot;Blake /  \n            Additional Voices \n  \n  \n  (voice)&quot;                                           
+ [4] &quot;Unikitty \n  \n  \n  (voice)&quot;                                                                           
+ [5] &quot;Octan Robot /  \n            Additional Voices \n  \n  \n  (voice)&quot;                                     
+ [6] &quot;C-3PO \n  \n  \n  (voice)&quot;                                                                              
+ [7] &quot;Benny \n  \n  \n  (voice)&quot;                                                                              
+ [8] &quot;Mom \n  \n  \n  (voice)&quot;                                                                                
+ [9] &quot;Han Solo \n  \n  \n  (voice)&quot;                                                                           
+[10] &quot;Lord Business /  \n            President Business /  \n            The Man Upstairs \n  \n  \n  (voice)&quot;
+[11] &quot;Abraham Lincoln \n  \n  \n  (voice) (as Orville Forte)&quot;                                                 
+[12] &quot;Wally \n  \n  \n  (voice)&quot;                                                                              
+[13] &quot;Vitruvius \n  \n  \n  (voice)&quot;                                                                          
+[14] &quot;Gandalf /  \n            Additional Voices \n  \n  \n  (voice)&quot;                                         
+[15] &quot;Green Lantern \n  \n  \n  (voice)&quot;                                                                      </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>rvest contains a few handy functions for accessing different attributes of the currently selected nodes. For example, we can access names of the selected tags with html_name():</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaHRtbF9ub2RlcyhodG1sLFwiLmNhc3RfbGlzdFwiKSAlPiUgXG4gIGh0bWxfbmFtZSgpXG5gYGAifQ== -->
+<pre class="r"><code>html_nodes(html,&quot;.cast_list&quot;) %&gt;% 
+  html_name()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwidGFibGVcIlxuIn0= -->
+<pre><code>[1] &quot;table&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaHRtbF9ub2RlKGh0bWwsXCIuY2FzdF9saXN0XCIpXG5gYGAifQ== -->
+<pre class="r"><code>html_node(html,&quot;.cast_list&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoie2h0bWxfbm9kZX1cbjx0YWJsZSBjbGFzcz1cImNhc3RfbGlzdFwiPlxuIFsxXSA8dHI+PHRkIGNvbHNwYW49XCI0XCIgY2xhc3M9XCJjYXN0bGlzdF9sYWJlbFwiPkNhc3Qgb3ZlcnZpZXcsIGZpcnN0IGJpbGxlZCBvbmx5OjxcL3RkPjxcL3RyPlxcblxuIFsyXSA8dHIgY2xhc3M9XCJvZGRcIj5cXG48dGQgY2xhc3M9XCJwcmltYXJ5X3Bob3RvXCI+XFxuPGEgaHJlZj1cIi9uYW1lL25tMDAwNDcxNS8/cmVmXz10dF9jbF9pMVwiPjxpbWcgaGVpZ2h0PVwiNDRcIiB3aWR0aD1cIiAuLi5cbiBbM10gPHRyIGNsYXNzPVwiZXZlblwiPlxcbjx0ZCBjbGFzcz1cInByaW1hcnlfcGhvdG9cIj5cXG48YSBocmVmPVwiL25hbWUvbm0wMDA2OTY5Lz9yZWZfPXR0X2NsX2kyXCI+PGltZyBoZWlnaHQ9XCI0NFwiIHdpZHRoPSAuLi5cbiBbNF0gPHRyIGNsYXNzPVwib2RkXCI+XFxuPHRkIGNsYXNzPVwicHJpbWFyeV9waG90b1wiPlxcbjxhIGhyZWY9XCIvbmFtZS9ubTE5MTE5NDcvP3JlZl89dHRfY2xfaTNcIj48aW1nIGhlaWdodD1cIjQ0XCIgd2lkdGg9XCIgLi4uXG4gWzVdIDx0ciBjbGFzcz1cImV2ZW5cIj5cXG48dGQgY2xhc3M9XCJwcmltYXJ5X3Bob3RvXCI+XFxuPGEgaHJlZj1cIi9uYW1lL25tMTU1NTM0MC8/cmVmXz10dF9jbF9pNFwiPjxpbWcgaGVpZ2h0PVwiNDRcIiB3aWR0aD0gLi4uXG4gWzZdIDx0ciBjbGFzcz1cIm9kZFwiPlxcbjx0ZCBjbGFzcz1cInByaW1hcnlfcGhvdG9cIj5cXG48YSBocmVmPVwiL25hbWUvbm0wMTIzMjYyLz9yZWZfPXR0X2NsX2k1XCI+PGltZyBoZWlnaHQ9XCI0NFwiIHdpZHRoPVwiIC4uLlxuIFs3XSA8dHIgY2xhc3M9XCJldmVuXCI+XFxuPHRkIGNsYXNzPVwicHJpbWFyeV9waG90b1wiPlxcbjxhIGhyZWY9XCIvbmFtZS9ubTAwMDAzNTUvP3JlZl89dHRfY2xfaTZcIj48aW1nIGhlaWdodD1cIjQ0XCIgd2lkdGg9IC4uLlxuIFs4XSA8dHIgY2xhc3M9XCJvZGRcIj5cXG48dGQgY2xhc3M9XCJwcmltYXJ5X3Bob3RvXCI+XFxuPGEgaHJlZj1cIi9uYW1lL25tMDIwNjM1OS8/cmVmXz10dF9jbF9pN1wiPjxpbWcgaGVpZ2h0PVwiNDRcIiB3aWR0aD1cIiAuLi5cbiBbOV0gPHRyIGNsYXNzPVwiZXZlblwiPlxcbjx0ZCBjbGFzcz1cInByaW1hcnlfcGhvdG9cIj5cXG48YSBocmVmPVwiL25hbWUvbm01MzIyOTUwLz9yZWZfPXR0X2NsX2k4XCI+PGltZyBoZWlnaHQ9XCI0NFwiIHdpZHRoPSAuLi5cblsxMF0gPHRyIGNsYXNzPVwib2RkXCI+XFxuPHRkIGNsYXNzPVwicHJpbWFyeV9waG90b1wiPlxcbjxhIGhyZWY9XCIvbmFtZS9ubTE1ODQ5OTIvP3JlZl89dHRfY2xfaTlcIj48aW1nIGhlaWdodD1cIjQ0XCIgd2lkdGg9XCIgLi4uXG5bMTFdIDx0ciBjbGFzcz1cImV2ZW5cIj5cXG48dGQgY2xhc3M9XCJwcmltYXJ5X3Bob3RvXCI+XFxuPGEgaHJlZj1cIi9uYW1lL25tMDAwMjA3MS8/cmVmXz10dF9jbF9pMTBcIj48aW1nIGhlaWdodD1cIjQ0XCIgd2lkdGggLi4uXG5bMTJdIDx0ciBjbGFzcz1cIm9kZFwiPlxcbjx0ZCBjbGFzcz1cInByaW1hcnlfcGhvdG9cIj5cXG48YSBocmVmPVwiL25hbWUvbm0wMjg3MTgyLz9yZWZfPXR0X2NsX2kxMVwiPjxpbWcgaGVpZ2h0PVwiNDRcIiB3aWR0aD0gLi4uXG5bMTNdIDx0ciBjbGFzcz1cImV2ZW5cIj5cXG48dGQgY2xhc3M9XCJwcmltYXJ5X3Bob3RvXCI+XFxuPGEgaHJlZj1cIi9uYW1lL25tMjAwMjY0OS8/cmVmXz10dF9jbF9pMTJcIj48aW1nIGhlaWdodD1cIjQ0XCIgd2lkdGggLi4uXG5bMTRdIDx0ciBjbGFzcz1cIm9kZFwiPlxcbjx0ZCBjbGFzcz1cInByaW1hcnlfcGhvdG9cIj5cXG48YSBocmVmPVwiL25hbWUvbm0wMDAwMTUxLz9yZWZfPXR0X2NsX2kxM1wiPjxpbWcgaGVpZ2h0PVwiNDRcIiB3aWR0aD0gLi4uXG5bMTVdIDx0ciBjbGFzcz1cImV2ZW5cIj5cXG48dGQgY2xhc3M9XCJwcmltYXJ5X3Bob3RvXCI+XFxuPGEgaHJlZj1cIi9uYW1lL25tMzAyNTM5OS8/cmVmXz10dF9jbF9pMTRcIj48aW1nIGhlaWdodD1cIjQ0XCIgd2lkdGggLi4uXG5bMTZdIDx0ciBjbGFzcz1cIm9kZFwiPlxcbjx0ZCBjbGFzcz1cInByaW1hcnlfcGhvdG9cIj5cXG48YSBocmVmPVwiL25hbWUvbm0xNzA2NzY3Lz9yZWZfPXR0X2NsX2kxNVwiPjxpbWcgaGVpZ2h0PVwiNDRcIiB3aWR0aD0gLi4uXG4ifQ== -->
+<pre><code>{html_node}
+&lt;table class=&quot;cast_list&quot;&gt;
+ [1] &lt;tr&gt;&lt;td colspan=&quot;4&quot; class=&quot;castlist_label&quot;&gt;Cast overview, first billed only:&lt;/td&gt;&lt;/tr&gt;\n
+ [2] &lt;tr class=&quot;odd&quot;&gt;\n&lt;td class=&quot;primary_photo&quot;&gt;\n&lt;a href=&quot;/name/nm0004715/?ref_=tt_cl_i1&quot;&gt;&lt;img height=&quot;44&quot; width=&quot; ...
+ [3] &lt;tr class=&quot;even&quot;&gt;\n&lt;td class=&quot;primary_photo&quot;&gt;\n&lt;a href=&quot;/name/nm0006969/?ref_=tt_cl_i2&quot;&gt;&lt;img height=&quot;44&quot; width= ...
+ [4] &lt;tr class=&quot;odd&quot;&gt;\n&lt;td class=&quot;primary_photo&quot;&gt;\n&lt;a href=&quot;/name/nm1911947/?ref_=tt_cl_i3&quot;&gt;&lt;img height=&quot;44&quot; width=&quot; ...
+ [5] &lt;tr class=&quot;even&quot;&gt;\n&lt;td class=&quot;primary_photo&quot;&gt;\n&lt;a href=&quot;/name/nm1555340/?ref_=tt_cl_i4&quot;&gt;&lt;img height=&quot;44&quot; width= ...
+ [6] &lt;tr class=&quot;odd&quot;&gt;\n&lt;td class=&quot;primary_photo&quot;&gt;\n&lt;a href=&quot;/name/nm0123262/?ref_=tt_cl_i5&quot;&gt;&lt;img height=&quot;44&quot; width=&quot; ...
+ [7] &lt;tr class=&quot;even&quot;&gt;\n&lt;td class=&quot;primary_photo&quot;&gt;\n&lt;a href=&quot;/name/nm0000355/?ref_=tt_cl_i6&quot;&gt;&lt;img height=&quot;44&quot; width= ...
+ [8] &lt;tr class=&quot;odd&quot;&gt;\n&lt;td class=&quot;primary_photo&quot;&gt;\n&lt;a href=&quot;/name/nm0206359/?ref_=tt_cl_i7&quot;&gt;&lt;img height=&quot;44&quot; width=&quot; ...
+ [9] &lt;tr class=&quot;even&quot;&gt;\n&lt;td class=&quot;primary_photo&quot;&gt;\n&lt;a href=&quot;/name/nm5322950/?ref_=tt_cl_i8&quot;&gt;&lt;img height=&quot;44&quot; width= ...
+[10] &lt;tr class=&quot;odd&quot;&gt;\n&lt;td class=&quot;primary_photo&quot;&gt;\n&lt;a href=&quot;/name/nm1584992/?ref_=tt_cl_i9&quot;&gt;&lt;img height=&quot;44&quot; width=&quot; ...
+[11] &lt;tr class=&quot;even&quot;&gt;\n&lt;td class=&quot;primary_photo&quot;&gt;\n&lt;a href=&quot;/name/nm0002071/?ref_=tt_cl_i10&quot;&gt;&lt;img height=&quot;44&quot; width ...
+[12] &lt;tr class=&quot;odd&quot;&gt;\n&lt;td class=&quot;primary_photo&quot;&gt;\n&lt;a href=&quot;/name/nm0287182/?ref_=tt_cl_i11&quot;&gt;&lt;img height=&quot;44&quot; width= ...
+[13] &lt;tr class=&quot;even&quot;&gt;\n&lt;td class=&quot;primary_photo&quot;&gt;\n&lt;a href=&quot;/name/nm2002649/?ref_=tt_cl_i12&quot;&gt;&lt;img height=&quot;44&quot; width ...
+[14] &lt;tr class=&quot;odd&quot;&gt;\n&lt;td class=&quot;primary_photo&quot;&gt;\n&lt;a href=&quot;/name/nm0000151/?ref_=tt_cl_i13&quot;&gt;&lt;img height=&quot;44&quot; width= ...
+[15] &lt;tr class=&quot;even&quot;&gt;\n&lt;td class=&quot;primary_photo&quot;&gt;\n&lt;a href=&quot;/name/nm3025399/?ref_=tt_cl_i14&quot;&gt;&lt;img height=&quot;44&quot; width ...
+[16] &lt;tr class=&quot;odd&quot;&gt;\n&lt;td class=&quot;primary_photo&quot;&gt;\n&lt;a href=&quot;/name/nm1706767/?ref_=tt_cl_i15&quot;&gt;&lt;img height=&quot;44&quot; width= ...</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaHRtbF9ub2RlKGh0bWwsXCIuY2FzdF9saXN0XCIpICU+JSBcbiAgaHRtbF90YWJsZSgpICU+JSBcbiAgaGVhZCgpXG5gYGAifQ== -->
+<pre class="r"><code>html_node(html,&quot;.cast_list&quot;) %&gt;% 
+  html_table() %&gt;% 
+  head()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6NH0sInJkZiI6Ikg0c0lBQUFBQUFBQUE1MVRVVXZETUJET3RyYXl5bFR3eWJmNHB1QXFjejZJRDhJNjlVa1F4TG05Wm0zVXNKaEltbTdXSjMrNWVsbVRNU3REWE9tUjc3N2NkOWVqZDNlWG8yNDRDaEZDRGRRSXdIeUF5Qi9jWDdmUEVQTHE0TlNRaDVybWZJT2dYUUFlMkE1WVlDLzIreVRUV0U2cG1qSTZPOEtQVElFL1pwelRGRXZCaTNNYmlQNDgxMHk4T1FRTzk1U2dXbHRxKzRxemR6S20raG5IUkV3eUY5bFhoRDNobUNwVk9LckhXU1lGamhXamxtcGRraWxMY1p3ckpXZlp1bC9WaUtMb1gzRE5PdDJZNkJjaThESEdJVjU2WXBVbkZBOUpJYWk1S04rRHFXUUpQYlRTNDJIQjAwd1huUDVTMytSSnNVcDJGbk15K1MzcHBTblRUQXJDOFlNSnoxYnA5d2FDVFpqV0t3dGMzQ1lhT3JxVFk2blhLZk56Y24xQlhxajdqWjRsNjZQT0FwMHNVSGVCVGl0Sm1qQUtrVXZVTWlFZjVjUUcxV29KSjVtcjVzZ3dKWnBFandyMDRIMVdKQnZ5MVRRRW9ycFpNTDhpcnFrS3NaTUw4eVZwTzNuT3hhVGQ2WmdLOC92U1d2WU1sckJYMXF4LzJWeSt6UlZROGNTRW0zeWZ3ODV3NjJ4QnkvT09vMWZGaE51czBPeEVwS1VtTGk1TUpIZk12RG4wK1EyL0VEdW1XQVFBQUE9PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["X1"],"name":[1],"type":["chr"],"align":["left"]},{"label":["X2"],"name":[2],"type":["chr"],"align":["left"]},{"label":["X3"],"name":[3],"type":["chr"],"align":["left"]},{"label":["X4"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"Cast overview, first billed only:","2":"Cast overview, first billed only:","3":"Cast overview, first billed only:","4":"Cast overview, first billed only:","_rn_":"1"},{"1":"","2":"Will Arnett","3":"...","4":"Batman /  \\n            Bruce Wayne \\n  \\n  \\n  (voice)","_rn_":"2"},{"1":"","2":"Elizabeth Banks","3":"...","4":"Wyldstyle /  \\n            Lucy \\n  \\n  \\n  (voice)","_rn_":"3"},{"1":"","2":"Craig Berry","3":"...","4":"Blake /  \\n            Additional Voices \\n  \\n  \\n  (voice)","_rn_":"4"},{"1":"","2":"Alison Brie","3":"...","4":"Unikitty \\n  \\n  \\n  (voice)","_rn_":"5"},{"1":"","2":"David Burrows","3":"...","4":"Octan Robot /  \\n            Additional Voices \\n  \\n  \\n  (voice)","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaHRtbF9ub2RlKGh0bWwsIFwiLmNhc3RfbGlzdCAuY2hhcmFjdGVyXCIpICU+JSBcbiAgaHRtbF90ZXh0KClcbmBgYCJ9 -->
+<pre class="r"><code>html_node(html, &quot;.cast_list .character&quot;) %&gt;% 
+  html_text()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiXFxuICAgICAgICAgICAgQmF0bWFuIC8gIFxcbiAgICAgICAgICAgIEJydWNlIFdheW5lIFxcbiAgXFxuICBcXG4gICh2b2ljZSlcXG4gIFxcbiAgICAgICAgICAgICAgICAgIFxcbiAgICAgICAgICBcIlxuIn0= -->
+<pre><code>[1] &quot;\n            Batman /  \n            Bruce Wayne \n  \n  \n  (voice)\n  \n                  \n          &quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaHRtbF9ub2RlcyhodG1sLCBcIi5jYXN0X2xpc3QgLmNoYXJhY3RlclwiKSAlPiUgXG4gIGh0bWxfY2hpbGRyZW4oKSAlPiUgXG4gIGh0bWxfYXR0cihcImhyZWZcIilcbmBgYCJ9 -->
+<pre class="r"><code>html_nodes(html, &quot;.cast_list .character&quot;) %&gt;% 
+  html_children() %&gt;% 
+  html_attr(&quot;href&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIi90aXRsZS90dDE0OTAwMTcvY2hhcmFjdGVycy9ubTAwMDQ3MTU/cmVmXz10dF9jbF90MVwiICBcIi90aXRsZS90dDE0OTAwMTcvY2hhcmFjdGVycy9ubTAwMDQ3MTU/cmVmXz10dF9jbF90MVwiIFxuIFszXSBcIi90aXRsZS90dDE0OTAwMTcvY2hhcmFjdGVycy9ubTAwMDY5Njk/cmVmXz10dF9jbF90MlwiICBcIi90aXRsZS90dDE0OTAwMTcvY2hhcmFjdGVycy9ubTAwMDY5Njk/cmVmXz10dF9jbF90MlwiIFxuIFs1XSBcIi90aXRsZS90dDE0OTAwMTcvY2hhcmFjdGVycy9ubTE1NTUzNDA/cmVmXz10dF9jbF90NFwiICBcIi90aXRsZS90dDE0OTAwMTcvY2hhcmFjdGVycy9ubTAyMDYzNTk/cmVmXz10dF9jbF90N1wiIFxuIFs3XSBcIi90aXRsZS90dDE0OTAwMTcvY2hhcmFjdGVycy9ubTAwMDIwNzE/cmVmXz10dF9jbF90MTBcIiBcIi90aXRsZS90dDE0OTAwMTcvY2hhcmFjdGVycy9ubTAwMDIwNzE/cmVmXz10dF9jbF90MTBcIlxuIFs5XSBcIi90aXRsZS90dDE0OTAwMTcvY2hhcmFjdGVycy9ubTAwMDIwNzE/cmVmXz10dF9jbF90MTBcIiBcIi90aXRsZS90dDE0OTAwMTcvY2hhcmFjdGVycy9ubTAyODcxODI/cmVmXz10dF9jbF90MTFcIlxuWzExXSBcIi90aXRsZS90dDE0OTAwMTcvY2hhcmFjdGVycy9ubTAwMDAxNTE/cmVmXz10dF9jbF90MTNcIiBcIi90aXRsZS90dDE0OTAwMTcvY2hhcmFjdGVycy9ubTMwMjUzOTk/cmVmXz10dF9jbF90MTRcIlxuWzEzXSBcIi90aXRsZS90dDE0OTAwMTcvY2hhcmFjdGVycy9ubTMwMjUzOTk/cmVmXz10dF9jbF90MTRcIiBcIi90aXRsZS90dDE0OTAwMTcvY2hhcmFjdGVycy9ubTE3MDY3Njc/cmVmXz10dF9jbF90MTVcIlxuIn0= -->
+<pre><code> [1] &quot;/title/tt1490017/characters/nm0004715?ref_=tt_cl_t1&quot;  &quot;/title/tt1490017/characters/nm0004715?ref_=tt_cl_t1&quot; 
+ [3] &quot;/title/tt1490017/characters/nm0006969?ref_=tt_cl_t2&quot;  &quot;/title/tt1490017/characters/nm0006969?ref_=tt_cl_t2&quot; 
+ [5] &quot;/title/tt1490017/characters/nm1555340?ref_=tt_cl_t4&quot;  &quot;/title/tt1490017/characters/nm0206359?ref_=tt_cl_t7&quot; 
+ [7] &quot;/title/tt1490017/characters/nm0002071?ref_=tt_cl_t10&quot; &quot;/title/tt1490017/characters/nm0002071?ref_=tt_cl_t10&quot;
+ [9] &quot;/title/tt1490017/characters/nm0002071?ref_=tt_cl_t10&quot; &quot;/title/tt1490017/characters/nm0287182?ref_=tt_cl_t11&quot;
+[11] &quot;/title/tt1490017/characters/nm0000151?ref_=tt_cl_t13&quot; &quot;/title/tt1490017/characters/nm3025399?ref_=tt_cl_t14&quot;
+[13] &quot;/title/tt1490017/characters/nm3025399?ref_=tt_cl_t14&quot; &quot;/title/tt1490017/characters/nm1706767?ref_=tt_cl_t15&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaHRtbF9ub2RlKGh0bWwsIFwiLmNhc3RfbGlzdCAuY2hhcmFjdGVyXCIpICU+JSBcbiAgaHRtbF9jaGlsZHJlbigpICU+JSBcbiAgaHRtbF90ZXh0KClcbmBgYCJ9 -->
+<pre class="r"><code>html_node(html, &quot;.cast_list .character&quot;) %&gt;% 
+  html_children() %&gt;% 
+  html_text()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQmF0bWFuXCIgICAgICBcIkJydWNlIFdheW5lXCJcbiJ9 -->
+<pre><code>[1] &quot;Batman&quot;      &quot;Bruce Wayne&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaHRtbF9ub2RlKGh0bWwsIFwiLmNhc3RfbGlzdCAuY2hhcmFjdGVyXCIpICU+JSBcbiAgaHRtbF9ub2Rlcyh4cGF0aD1cIi4vdGV4dCgpW25vcm1hbGl6ZS1zcGFjZSgpXVwiKVxuYGBgIn0= -->
+<pre class="r"><code>html_node(html, &quot;.cast_list .character&quot;) %&gt;% 
+  html_nodes(xpath=&quot;./text()[normalize-space()]&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoie3htbF9ub2Rlc2V0ICgyKX1cblsxXSAgLyAgXFxuICAgICAgICAgICAgXG5bMl0gIFxcbiAgXFxuICBcXG4gICh2b2ljZSlcXG4gIFxcbiAgICAgICAgICAgICAgICAgIFxcbiAgICAgICAgICBcbiJ9 -->
+<pre><code>{xml_nodeset (2)}
+[1]  /  \n            
+[2]  \n  \n  \n  (voice)\n  \n                  \n          </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaHRtbF9ub2RlKGh0bWwsIFwiLmNhc3RfbGlzdCAuY2hhcmFjdGVyXCIpICU+JSBcbiAgaHRtbF9ub2Rlcyh4cGF0aD1cIi4vdGV4dCgpW25vcm1hbGl6ZS1zcGFjZSgpXVwiKSAlPiUgXG4gIGh0bWxfdGV4dCh0cmltPVRSVUUpXG5gYGAifQ== -->
+<pre class="r"><code>html_node(html, &quot;.cast_list .character&quot;) %&gt;% 
+  html_nodes(xpath=&quot;./text()[normalize-space()]&quot;) %&gt;% 
+  html_text(trim=TRUE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiL1wiICAgICAgIFwiKHZvaWNlKVwiXG4ifQ== -->
+<pre><code>[1] &quot;/&quot;       &quot;(voice)&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiSGFydmVzdGluZyB0aGUgV2ViIC0gQmVuamFtaW4gS2FtcGthIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiAKClRyeSBleGVjdXRpbmcgdGhpcyBjaHVuayBieSBjbGlja2luZyB0aGUgKlJ1biogYnV0dG9uIHdpdGhpbiB0aGUgY2h1bmsgb3IgYnkgcGxhY2luZyB5b3VyIGN1cnNvciBpbnNpZGUgaXQgYW5kIHByZXNzaW5nICpDbWQrU2hpZnQrRW50ZXIqLiAKCmBgYHtyfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKYGBgCgpBZGQgYSBuZXcgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpJbnNlcnQgQ2h1bmsqIGJ1dHRvbiBvbiB0aGUgdG9vbGJhciBvciBieSBwcmVzc2luZyAqQ21kK09wdGlvbitJKi4KCldoZW4geW91IHNhdmUgdGhlIG5vdGVib29rLCBhbiBIVE1MIGZpbGUgY29udGFpbmluZyB0aGUgY29kZSBhbmQgb3V0cHV0IHdpbGwgYmUgc2F2ZWQgYWxvbmdzaWRlIGl0IChjbGljayB0aGUgKlByZXZpZXcqIGJ1dHRvbiBvciBwcmVzcyAqQ21kK1NoaWZ0K0sqIHRvIHByZXZpZXcgdGhlIEhUTUwgZmlsZSkuIAoKVGhlIHByZXZpZXcgc2hvd3MgeW91IGEgcmVuZGVyZWQgSFRNTCBjb3B5IG9mIHRoZSBjb250ZW50cyBvZiB0aGUgZWRpdG9yLiBDb25zZXF1ZW50bHksIHVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IFIgY29kZSBjaHVua3MuIEluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGluIHRoZSBlZGl0b3IgaXMgZGlzcGxheWVkLgoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiSGFydmVzdGluZyB0aGUgV2ViIC0gQmVuamFtaW4gS2FtcGthIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiAKClRyeSBleGVjdXRpbmcgdGhpcyBjaHVuayBieSBjbGlja2luZyB0aGUgKlJ1biogYnV0dG9uIHdpdGhpbiB0aGUgY2h1bmsgb3IgYnkgcGxhY2luZyB5b3VyIGN1cnNvciBpbnNpZGUgaXQgYW5kIHByZXNzaW5nICpDbWQrU2hpZnQrRW50ZXIqLiAKCmBgYHtyfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShydmVzdCkKYGBgCgpBZGQgYSBuZXcgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpJbnNlcnQgQ2h1bmsqIGJ1dHRvbiBvbiB0aGUgdG9vbGJhciBvciBieSBwcmVzc2luZyAqQ21kK09wdGlvbitJKi4KCldoZW4geW91IHNhdmUgdGhlIG5vdGVib29rLCBhbiBIVE1MIGZpbGUgY29udGFpbmluZyB0aGUgY29kZSBhbmQgb3V0cHV0IHdpbGwgYmUgc2F2ZWQgYWxvbmdzaWRlIGl0IChjbGljayB0aGUgKlByZXZpZXcqIGJ1dHRvbiBvciBwcmVzcyAqQ21kK1NoaWZ0K0sqIHRvIHByZXZpZXcgdGhlIEhUTUwgZmlsZSkuIAoKVGhlIHByZXZpZXcgc2hvd3MgeW91IGEgcmVuZGVyZWQgSFRNTCBjb3B5IG9mIHRoZSBjb250ZW50cyBvZiB0aGUgZWRpdG9yLiBDb25zZXF1ZW50bHksIHVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IFIgY29kZSBjaHVua3MuIEluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGluIHRoZSBlZGl0b3IgaXMgZGlzcGxheWVkLgoKYGBge3J9CmxlZ29fdXJsIDwtICJodHRwOi8vd3d3LmltZGIuY29tL3RpdGxlL3R0MTQ5MDAxNy8iCmh0bWwgPC0gcmVhZF9odG1sKGxlZ29fdXJsKQpjaGFyYWN0ZXJzIDwtIGh0bWxfbm9kZXMoaHRtbCwgIi5jYXN0X2xpc3QgLmNoYXJhY3RlciIpCmxlbmd0aChjaGFyYWN0ZXJzKQpgYGAKCmBgYHtyfQpjaGFyYWN0ZXJzWzE6Ml0KYGBgCgpgYGB7cn0KaHRtbF90ZXh0KGNoYXJhY3RlcnMsIHRyaW09VFJVRSkKYGBgCgpydmVzdCBjb250YWlucyBhIGZldyBoYW5keSBmdW5jdGlvbnMgZm9yIGFjY2Vzc2luZyBkaWZmZXJlbnQgYXR0cmlidXRlcyBvZiB0aGUgY3VycmVudGx5IHNlbGVjdGVkIG5vZGVzLiBGb3IgZXhhbXBsZSwgd2UgY2FuIGFjY2VzcyBuYW1lcyBvZiB0aGUgc2VsZWN0ZWQgdGFncyB3aXRoIGh0bWxfbmFtZSgpOgoKYGBge3J9Cmh0bWxfbm9kZXMoaHRtbCwiLmNhc3RfbGlzdCIpICU+JSAKICBodG1sX25hbWUoKQpgYGAKCmBgYHtyfQpodG1sX25vZGUoaHRtbCwiLmNhc3RfbGlzdCIpCmBgYAoKYGBge3J9Cmh0bWxfbm9kZShodG1sLCIuY2FzdF9saXN0IikgJT4lIAogIGh0bWxfdGFibGUoKSAlPiUgCiAgaGVhZCgpCmBgYApgYGB7cn0KaHRtbF9ub2RlKGh0bWwsICIuY2FzdF9saXN0IC5jaGFyYWN0ZXIiKSAlPiUgCiAgaHRtbF90ZXh0KCkKYGBgCgpgYGB7cn0KaHRtbF9ub2RlcyhodG1sLCAiLmNhc3RfbGlzdCAuY2hhcmFjdGVyIikgJT4lIAogIGh0bWxfY2hpbGRyZW4oKSAlPiUgCiAgaHRtbF9hdHRyKCJocmVmIikKYGBgCgpgYGB7cn0KaHRtbF9ub2RlKGh0bWwsICIuY2FzdF9saXN0IC5jaGFyYWN0ZXIiKSAlPiUgCiAgaHRtbF9jaGlsZHJlbigpICU+JSAKICBodG1sX3RleHQoKQpgYGAKCmBgYHtyfQpodG1sX25vZGUoaHRtbCwgIi5jYXN0X2xpc3QgLmNoYXJhY3RlciIpICU+JSAKICBodG1sX25vZGVzKHhwYXRoPSIuL3RleHQoKVtub3JtYWxpemUtc3BhY2UoKV0iKQpgYGAKCmBgYHtyfQpodG1sX25vZGUoaHRtbCwgIi5jYXN0X2xpc3QgLmNoYXJhY3RlciIpICU+JSAKICBodG1sX25vZGVzKHhwYXRoPSIuL3RleHQoKVtub3JtYWxpemUtc3BhY2UoKV0iKSAlPiUgCiAgaHRtbF90ZXh0KHRyaW09VFJVRSkKYGBgCgo=</div>
 
 
 
