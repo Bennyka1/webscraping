@@ -1,11 +1,9 @@
 ---
-title: "Harvesting the Web - Benjamin Kampka"
+title: "Harvesting the Web - Benjamin Kampka - 35017"
 output: html_notebook
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
-
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+# Harvesting the web with rvest
 
 ```{r}
 library(tidyverse)
@@ -77,7 +75,7 @@ html_node(html, ".cast_list .character") %>%
   html_text(trim=TRUE)
 ```
 
-## Test mit Selector Gadget
+# SelectorGadget tutorial
 
 ```{r}
 cast <- html_nodes(html, ".primary_photo+ td a")
@@ -110,3 +108,31 @@ cast_abs_urls <- html_attr(cast, "href") %>% url_absolute(lego_url)
 cast_abs_urls
 ```
 
+# rvest Documentary
+
+## Test mit "Die Veruteilten"
+
+Rating:
+
+```{r}
+die_verurteilten<- read_html("https://www.imdb.com/title/tt0111161/")
+rating <- die_verurteilten %>% html_nodes("strong span") %>% html_text() %>% as.numeric()
+rating
+```
+
+Cast:
+```{r}
+cast <- die_verurteilten %>%
+  html_nodes("#titleCast .primary_photo img") %>%
+  html_attr("alt")
+cast
+```
+
+Poster:
+
+```{r}
+poster <- die_verurteilten %>%
+  html_nodes(".poster img") %>%
+  html_attr("src")
+poster
+```
