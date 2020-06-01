@@ -58,7 +58,7 @@ FTPDownloader <- function(filename, folder, handle) {
 
   dir.create(folder, showWarnings = FALSE)
 
-  fileurl <- str_c(ftp, filename)
+  fileurl <- str_c(ftp_url, filename)
 
   if (!file.exists(str_c(folder, "/", filename))) {
 
@@ -79,8 +79,61 @@ Curlhandle <- getCurlHandle(ftp.use.epsv = FALSE)
 ```
 
 ```{r}
-l_ply(extracted_html_filenames, FTPDownloader, folder = "scrapingbee_html", handle = Curlhandle)
+library("plyr")
+l_ply(extracted_html_filenames, FTPDownloader,folder = "scrapingbee_html", handle = Curlhandle)
+list.files("./scrapingbee_html")
 ```
+
+### Scraping information from Wikipedia using R
+
+```{r}
+wiki_url <- "https://en.wikipedia.org/wiki/Leonardo_da_Vinci"
+wiki_read <- readLines(wiki_url, encoding = "UTF-8")
+library("XML")
+parsed_wiki <- htmlParse(wiki_read, encoding = "UTF-8")
+wiki_intro_text <- parsed_wiki["//p"]
+wiki_intro_text[[4]]
+```
+
+```{r}
+getHTMLLinks(wiki_read)
+```
+
+```{r}
+length(getHTMLLinks(wiki_read))
+```
+
+```{r}
+wiki_url1 <- "https://en.wikipedia.org/wiki/Help:Table"
+wiki_read1 <- readLines(wiki_url1, encoding = "UTF-8")
+length((readHTMLTable(wiki_read1)))
+```
+
+```{r}
+names(readHTMLTable(wiki_read1))
+```
+
+```{r}
+readHTMLTable(wiki_read1)$"The table's caption\n"
+```
+
+```{r}
+wiki_url2 <- "https://en.wikipedia.org/wiki/United_States_Census"
+wiki_read2 <- readLines(wiki_url2, encoding = "UTF-8")
+length((readHTMLTable(wiki_read2)))
+```
+
+```{r}
+names(readHTMLTable(wiki_read2))
+
+```
+
+```{r}
+readHTMLTable(wiki_read2)[3]
+```
+
+### Handling HTML forms while scraping with R
+
 
 
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
